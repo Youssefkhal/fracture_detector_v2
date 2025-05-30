@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <title>Upload et Résultat YOLOv5</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f7f9fc;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 900px;
+            width: 100%;
+            background: white;
+            padding: 30px 40px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 25px;
+        }
+
+        form {
+            margin-bottom: 30px;
+        }
+
+        input[type="file"] {
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-left: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .images-wrapper {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .image-box {
+            flex: 1 1 400px;
+            max-width: 45%;
+        }
+
+        .image-box h2 {
+            margin-bottom: 15px;
+            color: #444;
+        }
+
+        img {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        @media (max-width: 700px) {
+            .images-wrapper {
+                flex-direction: column;
+                gap: 30px;
+            }
+            .image-box {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Uploader une image</h1>
+        <form method="POST" enctype="multipart/form-data">
+            <input type="file" name="file" required />
+            <button type="submit">Envoyer</button>
+        </form>
+
+        <div class="images-wrapper">
+            {% if user_image %}
+                <div class="image-box">
+                    <h2>Image originale :</h2>
+                    <img src="{{ url_for('static', filename=user_image) }}" alt="Image originale" />
+                </div>
+            {% endif %}
+
+            {% if result_image %}
+                <div class="image-box">
+                    <h2>Résultat :</h2>
+                    <img src="{{ url_for('static', filename=result_image) }}" alt="Image détectée" />
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>
