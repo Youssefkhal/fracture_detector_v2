@@ -5,10 +5,12 @@ It consists of medical images annotated for fracture detection.
 
 🔗 Dataset Google Drive Link:
 https://drive.google.com/drive/folders/15bUxugOmW3hWJ4QJ-Nosuh9UmPSaT8bm?usp=sharing
-![image](https://github.com/user-attachments/assets/1abe9a0e-b9ee-4c74-9801-d5fc4f16fd66)
-![image](https://github.com/user-attachments/assets/51833051-f338-48b8-8bb0-1813479f39a0)
-![image](https://github.com/user-attachments/assets/f45df798-ad53-45c4-998c-3e5b2af3992d)
-![image](https://github.com/user-attachments/assets/a25facb6-8888-4d98-b2d0-7892004bc043)
+![image](https://github.com/user-attachments/assets/92869140-4ba9-4339-83ce-d8876cf74be0)
+![image](https://github.com/user-attachments/assets/8ff0cbc0-f762-4582-a2b4-e0b30c0f65c7)
+![image](https://github.com/user-attachments/assets/f43808c6-73ef-4238-840d-df6c5de15716)
+![image](https://github.com/user-attachments/assets/0db774ba-b02c-4dbc-8a6a-72d636be5552)
+![image](https://github.com/user-attachments/assets/830e66c3-4def-48fe-9d07-e979a8f0e140)
+
 
 ## 📁 Dataset Structure
 
